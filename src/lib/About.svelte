@@ -1,13 +1,12 @@
 <script>
     import ExperienceCard from "./ExperienceCard.svelte";
-    import Experience from "./Experience.svelte";
     export let experiences;
     export let education;
 
 </script>
 
-<section class="mb-4">
-    <h2 class="text-3xl font-semibold mb-6">About</h2>
+<section class="mb-6">
+    <h2 class="text-4xl font-semibold mb-6">About</h2>
     <div class="hover:bg-highlight p-4 rounded-lg">
         <p>This is some stuff about me.</p>
         <p>I like cats.</p>
@@ -15,18 +14,22 @@
     </div>
 </section>
 
-<section class="mb-4">
-    <h2 class="text-3xl font-semibold mb-6">Experience</h2>
+<section class="mb-8">
+    <h2 class="text-4xl font-semibold mb-6">Experience</h2>
     <div>
+        <h2 id="experienceAccordionTitle" class="sr-only">Expandable List of Work Experiences</h2>
         {#each experiences as experience}
             <ExperienceCard experience={experience}/>
         {/each}
     </div>
-    <h2 class="text-3xl font-semibold mb-6">Education</h2>
+</section>
+
+<section>
+    <h2 class="text-4xl font-semibold mb-6">Education</h2>
     {#each education as education}
     <div class="grid grid-cols-6 gap-4 bg-primary hover:bg-highlight p-6 rounded-lg shadow-lg hover:shadow-xl transition mb-8">
         <div class="col-span-1">
-            <img class="bg-white outline outline-1 outline-offset-4 outline-secondary" src={education.photo.src} alt={education.photo.alt}>
+            <img class="bg-white outline outline-1 outline-offset-4 outline-secondary max-w-64" src={education.photo.src} alt={education.photo.alt}>
         </div>
         <div class="col-span-5">
             <h3 class="text-xl font-bold">{education.school}</h3>

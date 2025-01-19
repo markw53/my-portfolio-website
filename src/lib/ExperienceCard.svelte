@@ -21,21 +21,22 @@
 
 <div id="experienceAccordion">
     <div class="border border-none rounded-lg bg-primary hover:bg-highlight dark:border-neutral-600 dark:bg-body-dark">
-        <h2 class="mb-0" id={`heading ${experience.id}`}>
-            <div id="job-info" class="flex justify-between items-center p-4">
+        <div class="mb-0" id={`heading-${experience.id}`}>
+            <div id="job-info" class="flex justify-between items-center">
                 <div class="flex-1">
                     <div class="flex items-center">
                         <div class="p-4 flex-shrink-0 w-1/6 sm:w-1/8 md:w-1/12">
                             <img class="bg-white w-full h-auto" src={experience.photo.src} alt={experience.photo.alt}>
                         </div>
                         <div class="ml-4">
-                            <p class="text-xl font-bold">{experience.jobTitle}</p>
+                            <h3 class="text-xl font-bold">{experience.jobTitle}</h3>
                             <p class="mt-2">{`${experience.company}, ${experience.location} (${experience.startDate} - ${experience.endDate})`}</p>
                         </div>
                     </div>
                 </div>
+                <!-- svelte-ignore a11y_consider_explicit_label -->
                 <button
-                    class="group relative flex items-center border-0 bg-transparent px-5 py-4 text-left text-base text-secondary transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-transparent [&:not([data-twe-collapse-collapsed])]:text-secondary [&:not([data-twe-collapse-collapsed])]:shadow-border dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-secondary dark:[&:not([data-twe-collapse-collapsed])]:shadow-primary/10 "
+                    class="group relative flex items-center border-0 bg-white px-6 py-5 text-left text-base text-secondary transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-transparent [&:not([data-twe-collapse-collapsed])]:text-secondary [&:not([data-twe-collapse-collapsed])]:shadow-border dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-secondary dark:[&:not([data-twe-collapse-collapsed])]:shadow-primary/10 "
                     type="button"
                     data-twe-collapse-init
                     data-twe-target={`#collapse${experience.id}`}
@@ -57,16 +58,16 @@
                     </span>
                 </button>
             </div>
-        </h2>
+        </div>
         <div
             id={`collapse${experience.id}`}
-            class={`grid grid-cols-10 ${experience.id === 1 ? "!visible" : "!visible hidden"}`}
+            class={`grid grid-cols-11 ${experience.id === 1 ? "!visible" : "!visible hidden"}`}
             data-twe-collapse-item
             data-twe-collapse-show
-            aria-labelledby={`heading ${experience.id}`}
+            aria-labelledby={`heading-${experience.id}`}
             data-twe-parent="#experienceAccordion">
             <span class="col-span-1"></span>
-            <span class="col-span-9 p-4">
+            <span class="col-span-10 pl-0.5 pr-10 mb-2">
                 {#each experience.description as paragraph}
                     <p>{paragraph}</p>
                 {/each}

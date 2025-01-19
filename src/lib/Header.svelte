@@ -32,11 +32,12 @@ onMount(async () => {
 </script>
 
 <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:py-24 p-6 text-secondary">
-    <h1 class="text-4xl font-bold mb-4">Katherine Wilde</h1>
-    <p class="text-lg mb-4">Software Developer</p>
-    <nav class="flex flex-col space-y-4 mt-4">
+    <h1 class="text-6xl font-bold mb-4">Katherine Wilde</h1>
+    <p class="text-4xl mb-4">Software Developer</p>
+    <nav class="text-2xl flex flex-col space-y-4 mt-4">
         <a href="#about" on:click={scrollToSection}>About</a>
         <a href="#projects" on:click={scrollToSection}>Projects</a>
+        <a href="#contact" on:click={scrollToSection}>Contact</a>
     </nav>
 
     <div class="flex mt-8 space-x-4">
