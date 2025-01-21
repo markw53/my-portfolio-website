@@ -1,49 +1,54 @@
 <script>
-import SocialButton from './SocialButton.svelte';
-import DATA from "$lib/data";
-const contacts = DATA.CONTACTS;
+	import SocialButton from './SocialButton.svelte';
+	import DATA from '$lib/data';
+	import { onMount } from 'svelte';
 
-import { onMount } from "svelte";
+	onMount(async () => {
+		if (typeof window !== 'undefined') {
+			try {
+				const { Ripple, initTWE } = await import('tw-elements/js/tw-elements.umd.min.js');
+				initTWE({ Ripple });
+			} catch (error) {
+				console.error('Failed to load tw-elements:', error);
+			}
+		}
+	});
 
-onMount(async () => {
-    if (typeof window !== 'undefined') {
-        try {
-            const { Ripple, initTWE } = await import("tw-elements/js/tw-elements.umd.min.js");
-            initTWE({ Ripple });
-        } catch (error) {
-            console.error('Failed to load tw-elements:', error);
-        }
-    }
-});
+	const contacts = DATA.CONTACTS;
 
-    function scrollToSection(event) {
-        event.preventDefault(); // Prevent default anchor click behavior
-        const targetId = event.currentTarget.getAttribute('href').substring(1); // Get the target section ID
-        const targetElement = document.getElementById(targetId); // Get the target element
+	function scrollToSection(event) {
+		event.preventDefault();
+		const targetId = event.currentTarget.getAttribute('href').substring(1);
+		const targetElement = document.getElementById(targetId);
 
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth', // Smooth scroll
-                block: 'start', // Align to the start of the element
-                inline: 'nearest'
-            });
-        }
-    }
+		if (targetElement) {
+			targetElement.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest'
+			});
+		}
+	}
+
 </script>
 
-<header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:py-24 p-6 text-secondary">
-    <h1 class="text-6xl font-bold mb-4">Katherine Wilde</h1>
-    <p class="text-4xl mb-4">Software Developer</p>
-    <nav class="text-2xl flex flex-col space-y-4 mt-4">
-        <a href="#about" on:click={scrollToSection}>About</a>
-        <a href="#projects" on:click={scrollToSection}>Projects</a>
-        <a href="#contact" on:click={scrollToSection}>Contact</a>
-    </nav>
+<header
+	class="p-6 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:py-24"
+>
+	<h1 class="mb-4 text-6xl font-bold">Katherine Wilde</h1>
+	<p class="text-secondary mb-4 text-4xl">Software Developer</p>
 
-    <div class="flex mt-8 space-x-4">
-        {#each contacts as contact}
-            <SocialButton contact={contact}/>
-        {/each}
-    </div>
-    
+	<nav class="mt-4 flex flex-col space-y-4 text-2xl">
+		<!--<div transition:fly={{ y: 100, duration: 500 }}> -->
+		<a href="#about" on:click={scrollToSection}>About</a>
+		<a href="#experience" on:click={scrollToSection}>Experience</a>
+		<a href="#projects" on:click={scrollToSection}>Projects</a>
+		<a href="#contact" on:click={scrollToSection}>Contact</a>
+	</nav>
+
+	<div class="mt-8 flex space-x-4">
+		{#each contacts as contact}
+			<SocialButton {contact} />
+		{/each}
+	</div>
 </header>
