@@ -1,19 +1,10 @@
 <script>
 	export let project;
-	export let skillsList;
 
 	function handleClick() {
 		if (project.link) {
 			window.open(project.link, '_blank');
 		}
-	}
-
-	const lookupIcons = new Map(skillsList.map((skill) => [skill.name, skill.icon]));
-
-	const icons = project.skills.map((skill) => lookupIcons.get(skill) || skill);
-
-	function isValidImage(src) {
-		return src && !src.startsWith('data:') && /\.(jpg|jpeg|png|gif|bmp|svg|webp)$/i.test(src);
 	}
 </script>
 
@@ -25,13 +16,13 @@
 	tabindex="0"
 	on:keypress={(e) => e.key === 'Enter' && handleClick()}
 >
-	<div class="hover:bg-primary hover:bg-opacity-25 mb-8 rounded-lg p-6 shadow-lg transition hover:shadow-xl">
+	<div class="hover:bg-accent-rose mb-8 p-6 transition">
 		{#if project.photo.src}
-		<div class="h-52 w-80 mb-4 relative bg-gradient-to-br from-secondary via-transparent to-white flex items-center justify-center">	
-			<!-- bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 -->
-			<!-- bg-gradient-to-r from-slate-900 via-transparent to-slate-900 -->	
+			<div
+				class="relative mb-4 flex h-64 max-w-screen-sm items-center justify-center bg-transparent"
+			>
 				<img
-					class="inset-0 max-h-full p-1 opacity-100 z-20"
+					class="inset-0 z-20 max-h-full p-1 opacity-100"
 					src={project.photo.src}
 					alt={project.photo.alt}
 				/>
@@ -40,15 +31,15 @@
 		<h3 class="text-xl font-bold">{project.title}</h3>
 		<p class="mt-2">{`${project.organisation} (${project.year})`}</p>
 		{#each project.description as paragraph}
-			<p class="mt-2">{paragraph}</p>
+			<p>{paragraph}</p>
 		{/each}
-		<div class="mt-6 flex flex-row items-start text-center">
-			{#each icons as icon (icon)}
-				{#if isValidImage(icon)}
-					<img class="mr-6 w-16" src={icon} alt={icon} />
-				{:else}
-					<span class="mr-6 w-16 font-semibold">{icon}</span>
-				{/if}
+		<div class="mt-6 flex flex-wrap items-start text-center">
+			{#each project.skills as skill}
+				<li
+					class={`text-primary m-4 flex items-center justify-center rounded-full bg-transparent px-2.5 py-0.5 text-sm font-semibold outline outline-1`}
+				>
+					{skill}
+				</li>
 			{/each}
 		</div>
 	</div>
@@ -56,6 +47,3 @@
 
 <style>
 </style>
-
-
-<!-- bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-300 via-green-400 to-rose-700 -->

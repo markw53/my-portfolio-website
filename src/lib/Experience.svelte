@@ -1,11 +1,11 @@
 <script>
 	import ExperienceCard from './ExperienceCard.svelte';
 	export let experiences;
-	export let education;
+//	export let education;
 </script>
 
-<section class="bg-accent-salmon mb-8 rounded-lg bg-opacity-10 p-6">
-	<h2 class="mb-6 text-4xl font-semibold">Experience</h2>
+<section class="bg-white text-primary mb-8 rounded-sm">
+	<h2 class="mb-6 pt-6 pl-6 text-4xl font-semibold">Experience</h2>
 	<div>
 		<h2 id="experienceAccordionTitle" class="sr-only">Expandable List of Work Experiences</h2>
 		{#each experiences as experience}

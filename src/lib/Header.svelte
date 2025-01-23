@@ -1,7 +1,8 @@
 <script>
 	import SocialButton from './SocialButton.svelte';
-	import DATA from '$lib/data';
 	import { onMount } from 'svelte';
+	export let personal;
+	export let contacts;
 
 	onMount(async () => {
 		if (typeof window !== 'undefined') {
@@ -13,8 +14,6 @@
 			}
 		}
 	});
-
-	const contacts = DATA.CONTACTS;
 
 	function scrollToSection(event) {
 		event.preventDefault();
@@ -29,14 +28,12 @@
 			});
 		}
 	}
-
 </script>
 
-<header
-	class="p-6 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:py-24"
->
-	<h1 class="mb-4 text-6xl font-bold">Katherine Wilde</h1>
-	<p class="text-secondary mb-4 text-4xl">Software Developer</p>
+<header class="p-10 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:py-24">
+	<h1 class="mb-4 text-6xl font-bold">{personal.name}</h1>
+	<p class="text-secondary mb-4 text-4xl">{personal.role}</p>
+	<p class="text-xl">{personal.introduction}</p>
 
 	<nav class="mt-4 flex flex-col space-y-4 text-2xl">
 		<!--<div transition:fly={{ y: 100, duration: 500 }}> -->

@@ -7,6 +7,7 @@
 	import DATA from '$lib/data';
 	import Experience from '$lib/Experience.svelte';
 	import FadeInSection from '$lib/FadeInSection.svelte';
+	import Skills from '$lib/Skills.svelte';
 
 	onMount(async () => {
 		if (typeof window !== 'undefined') {
@@ -16,43 +17,67 @@
 			} catch (error) {
 				console.error('Failed to load tw-elements:', error);
 			}
+			const toTopButton = document.getElementById('to-top-button');
+			window.onscroll = function () {
+				if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+					toTopButton.classList.remove('hidden');
+				} else {
+					toTopButton.classList.add('hidden');
+				}
+			};
 		}
 	});
+
+	function goToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 </script>
 
-<div class="text-neutral-white bg-gradient-main min-h-screen lg:flex lg:justify-between lg:gap-4">
+<div class="text-neutral-white bg-primary min-h-screen lg:flex lg:justify-between lg:gap-4">
 	<a href="#main-content" class="sr-only text-center text-2xl underline focus:not-sr-only"
 		>Skip to main content</a
 	>
-	<Header />
-	<main id="main-content" class="text-neutral-white pl-6 pr-6 lg:w-[80%]">
-		<div id="about" class="pt-24">
-			<About skills={DATA.SKILLS} />
+	<Header personal={DATA.PERSONAL} contacts={DATA.CONTACTS} />
+	<main id="main-content" class="text-neutral-white lg:w-[85%]">
+		<!-- pl-6 pr-6 -->
+		<div id="about" class="pt-24 lg:w-[95%]">
+			<About paragraphs={DATA.ABOUT.paragraphs} />
 		</div>
-		<div id="experience" class="pt-24">
+		<div id="about" class="pt-24 lg:w-[95%]">
+			<FadeInSection>
+				<Skills skills={DATA.SKILLS} />
+			</FadeInSection>
+		</div>
+		<div id="experience" class="pt-24 lg:w-[95%]">
 			<FadeInSection>
 				<Experience experiences={DATA.ABOUT.experience} education={DATA.ABOUT.education} />
 			</FadeInSection>
 		</div>
-		<div id="projects" class="col-span-1 pt-24">
+		<div id="projects" class="col-span-1 pt-24 lg:w-[95%]">
 			<FadeInSection>
 				<Projects projects={DATA.PROJECTS} skills={DATA.SKILLS} />
 			</FadeInSection>
 		</div>
-		<div id="contact" class="col-span-1 pt-24">
+		<div id="contact" class="col-span-1 pt-24 lg:w-[95%]">
 			<FadeInSection>
 				<Contact />
 			</FadeInSection>
 		</div>
-		<div class="mt-0 w-full py-6 lg:ml-auto">
+		<div class="mt-0 w-full py-6 pl-6 lg:ml-auto">
 			<a href={DATA.SOURCE.src} target="_blank"
-				>{`© ${DATA.SOURCE.creation_year} Katherine Wilde. All Rights Reserved.`}</a
+				>{`© ${DATA.SOURCE.creation_year} ${DATA.PERSONAL.name}. All Rights Reserved.`}</a
 			>
 		</div>
 	</main>
-</div>
 
-<!-- bg-gradient-to-r from-russian_violet from-30% via-ultra_violet to-african_violet to-90% -->
+	<button
+		id="to-top-button"
+		on:click={goToTop}
+		title="Go To Top"
+		class="z-90 bg-accent-salmon text-primary fixed bottom-8 right-8 hidden h-16 w-16 rounded-full border-0 text-3xl font-bold drop-shadow-md"
+		>&uarr;</button
+	>
+</div>
 
 <style>
 	@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';

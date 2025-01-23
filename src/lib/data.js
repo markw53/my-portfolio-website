@@ -16,19 +16,20 @@ const PERSONAL = {
 const SKILLS = {
 	specializations: ['Software Engineering', 'Full-Stack Development'],
 	programmingLanguages: [
+		{ name: 'JavaScript', icon: '/photos/JavaScript.svg', category: 'frontend' },
 		{ name: 'Python', icon: '/photos/Python.svg', category: 'backend' },
 		{ name: 'Java', icon: '/photos/Java.svg', category: 'backend' },
 		{ name: 'SQL', icon: '/photos/sql-database-generic-svgrepo-com.svg', category: 'backend' },
 		{ name: 'HTML', icon: '/photos/HTML5.svg', category: 'frontend' },
-		{ name: 'CSS', icon: '/photos/CSS3.svg', category: 'frontend' },
-		{ name: 'JavaScript', icon: '/photos/JavaScript.svg', category: 'frontend' }
+		{ name: 'CSS', icon: '/photos/CSS3.svg', category: 'frontend' }
 	],
 	technologies: [
-		{ name: 'Svelte', icon: '/photos/Svelte.svg', category: 'frameworks' },
-		{ name: 'Sveltekit', icon: '/photos/Svelte.svg', category: 'frameworks' },
 		{ name: 'React', icon: '/photos/React.svg', category: 'frameworks' },
+		{ name: 'React Native', icon: '/photos/React.svg', category: 'frameworks' },
 		{ name: 'Node.js', icon: '/photos/Node.js.svg', category: 'frameworks' },
 		{ name: 'Express', icon: '/photos/Express.png', category: 'frameworks' },
+		{ name: 'Svelte', icon: '/photos/Svelte.svg', category: 'frameworks' },
+		{ name: 'Sveltekit', icon: '/photos/Svelte.svg', category: 'frameworks' },
 		{ name: 'PostgreSQL', icon: '/photos/PostgresSQL.svg', category: 'databases' },
 		{ name: 'Git', icon: '/photos/Git.svg', category: 'version_control' },
 		{ name: 'GitHub', icon: '/photos/GitHub.svg', category: 'version_control' },
@@ -56,7 +57,11 @@ const CONTACTS = [
 ];
 
 const ABOUT = {
-	paragraphs: ["Hi, I'm Katherine Wilde."],
+	paragraphs: [
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+	],
 	experience: [
 		{
 			id: 1,
