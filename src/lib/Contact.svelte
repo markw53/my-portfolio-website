@@ -5,10 +5,35 @@
 
 </script>
 
+
 <section class="bg-neutral-white text-primary mb-4 rounded-sm p-6">
 	<h2 class="mb-6 text-4xl font-semibold">Contact</h2>
 
 	<form name="contact" method="POST" data-netlify="true">
+		<p>
+		  <label>Your Name: <input type="text" name="name" /></label>
+		</p>
+		<p>
+		  <label>Your Email: <input type="email" name="email" /></label>
+		</p>
+		<p>
+		  <label>Your Role: <select name="role[]" multiple>
+			<option value="leader">Leader</option>
+			<option value="follower">Follower</option>
+		  </select></label>
+		</p>
+		<p>
+		  <label>Message: <textarea name="message"></textarea></label>
+		</p>
+		<p>
+		  <button type="submit">Send</button>
+		</p>
+	  </form>
+	  
+
+
+<!--
+	<form name="contact" method="POST" data-netlify="true" action="/">
 		<input type="hidden" name="form-name" value="contact" />
 
 		<label for="name" class="text-primary block font-semibold">Name</label>
@@ -50,7 +75,7 @@
 			Submit
 		</button>
 	</form>
-</section>
-
+-->
+	</section>
 <style>
 </style>
