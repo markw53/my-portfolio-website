@@ -9,5 +9,9 @@ export default defineConfig({
 	},
 	ssr: {
 		noExternal: ['tw-elements'],
-	}
+	},
+
+	build: {
+		sourcemap: true,
+	},
 });
