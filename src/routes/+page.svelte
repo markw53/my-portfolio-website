@@ -33,7 +33,7 @@
 	}
 </script>
 
-<div class="text-neutral-white bg-primary min-h-screen lg:flex lg:justify-between lg:gap-4">
+<div class="min-h-screen bg-primary text-neutral-gray lg:flex lg:justify-between lg:gap-4">
 	<a href="#main-content" class="sr-only text-center text-2xl underline focus:not-sr-only"
 		>Skip to main content</a
 	>
@@ -41,24 +41,25 @@
 	<main id="main-content" class="text-neutral-white lg:w-[85%]">
 		<!-- pl-6 pr-6 -->
 		<div id="about" class="pt-24 lg:w-[95%]">
+			<!-- pt-24 -->
 			<About paragraphs={DATA.ABOUT.paragraphs} />
 		</div>
-		<div id="about" class="pt-24 lg:w-[95%]">
+		<div id="about" class="lg:w-[95%]">
 			<FadeInSection>
 				<Skills skills={DATA.SKILLS} />
 			</FadeInSection>
 		</div>
-		<div id="experience" class="pt-24 lg:w-[95%]">
+		<div id="experience" class="lg:w-[95%]">
 			<FadeInSection>
 				<Experience experiences={DATA.ABOUT.experience} education={DATA.ABOUT.education} />
 			</FadeInSection>
 		</div>
-		<div id="projects" class="col-span-1 pt-24 lg:w-[95%]">
+		<div id="projects" class="col-span-1 lg:w-[95%]">
 			<FadeInSection>
 				<Projects projects={DATA.PROJECTS} skills={DATA.SKILLS} />
 			</FadeInSection>
 		</div>
-		<div id="contact" class="col-span-1 pt-24 lg:w-[95%]">
+		<div id="contact" class="col-span-1 lg:w-[95%]">
 			<FadeInSection>
 				<Contact />
 			</FadeInSection>
@@ -69,16 +70,32 @@
 			>
 		</div>
 	</main>
-
 	<button
 		id="to-top-button"
 		on:click={goToTop}
 		title="Go To Top"
-		class="z-90 bg-accent-salmon text-primary fixed bottom-8 right-8 hidden h-16 w-16 rounded-full border-0 text-3xl font-bold drop-shadow-md"
-		>&uarr;</button
+		class="z-90 fixed bottom-8 right-8 flex hidden h-16 w-16 items-center justify-center rounded-full border-0 bg-accent-salmon text-3xl font-bold text-primary drop-shadow-md"
+		aria-label="Go to top"
 	>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			class="h-10 w-10"
+		>
+			<path
+				d="M12 19V6m0 0l-5 5m5-5l5 5"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+		</svg>
+	</button>
 </div>
 
 <style>
 	@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
 </style>
+
+

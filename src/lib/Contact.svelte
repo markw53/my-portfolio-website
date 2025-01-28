@@ -4,8 +4,8 @@
 	let message = '';
 </script>
 
-<section class="mb-4 rounded-sm bg-neutral-white p-6 text-primary">
-	<h2 class="mb-6 text-4xl font-semibold">Contact</h2>
+<section class="mb-4 rounded-sm bg-primary p-6 text-neutral-gray">
+	<h2 class="mb-6 text-4xl text-secondary">Contact</h2>
 
 	<form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
 		<input type="hidden" name="form-name" value="contact" />
@@ -45,7 +45,7 @@
 
 		<button
 			type="submit"
-			class="mt-4 w-full rounded-md bg-secondary py-3 font-semibold text-primary shadow-md hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary"
+			class="button-shadow button-shadow-hover mt-4 w-full rounded-md bg-secondary py-3 font-semibold text-primary hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary"
 		>
 			Submit
 		</button>
@@ -53,4 +53,10 @@
 </section>
 
 <style>
+	.button-shadow {
+		box-shadow: none;
+	}
+	.button-shadow-hover:hover {
+		box-shadow: 0 0 6px 1px #7dd3fc;
+	}
 </style>

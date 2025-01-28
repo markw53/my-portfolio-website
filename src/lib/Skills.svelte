@@ -8,32 +8,37 @@
 
 <!--<div class="h-1 mb-2 rounded-lg bg-gradient-to-r from-secondary to-primary"></div>-->
 
-<section class="bg-neutral-white text-primary mb-8 rounded-sm p-6">
-	<h2 class="mb-6 text-4xl font-semibold">Skills</h2>
+<section class="mb-8 rounded-sm bg-primary p-6 text-neutral-gray">
+	<h2 class="mb-6 text-4xl text-secondary">Skills</h2>
 	<h3 class="text-xl font-bold">Programming Languages</h3>
 	<ul class="flex flex-wrap justify-center">
-		<!-- rounded-md bg-slate-800 py-0.5 px-2.5 border border-transparent text-sm text-white transition-all shadow-sm -->
 		{#each skills.programmingLanguages as language}
 			<li
-				class={`text-primary m-4 flex flex-col items-center bg-transparent text-sm font-semibold`}
+				class="m-4 flex h-24 w-20 flex-col items-center justify-center rounded-md bg-black/10 text-sm font-semibold text-neutral-gray shadow-lg"
 			>
 				{#if isValidImage(language.icon)}
-					<img class="mr-6 w-12" src={language.icon} alt={language.name} />
+					<div class="flex h-10 w-10 items-center justify-center bg-transparent">
+						<img class="h-full w-full object-contain" src={language.icon} alt={language.name} />
+					</div>
 				{/if}
-				<p class="mr-6 pt-1 font-semibold">{language.name}</p>
+
+				<p class="text-center">{language.name}</p>
 			</li>
 		{/each}
 	</ul>
+
 	<h3 class="text-xl font-bold">Technologies</h3>
 	<ul class="flex flex-wrap justify-center">
 		{#each skills.technologies as technology}
 			<li
-				class={`text-primary m-4 flex flex-col items-center bg-transparent text-sm font-semibold`}
+				class={`m-4 flex h-24 w-20 flex-col items-center justify-center rounded-md bg-black/10 text-sm font-semibold text-neutral-gray shadow-lg`}
 			>
 				{#if isValidImage(technology.icon)}
-					<img class="mr-6 w-12" src={technology.icon} alt={technology.icon} />
+					<div class="flex h-10 w-10 items-center justify-center bg-transparent">
+						<img class="h-full w-full object-contain" src={technology.icon} alt={technology.icon} />
+					</div>
 				{/if}
-				<p class="mr-6 pt-1 font-semibold">{technology.name}</p>
+				<p class="text-center">{technology.name}</p>
 			</li>
 		{/each}
 	</ul>

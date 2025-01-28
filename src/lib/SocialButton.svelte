@@ -5,9 +5,7 @@
 <a href={contact.url} target="_blank" role="button" aria-label={contact.actionType}>
 	<button
 		type="button"
-		data-twe-ripple-init
-		data-twe-ripple-color="light"
-		class="bg-accent-salmon text-primary hover:bg-accent-rose mb-2 inline-block rounded-md p-3 text-xs font-medium uppercase leading-normal shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+		class="button-shadow button-shadow-hover mb-2 block rounded-md bg-accent-salmon p-3 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:bg-accent-rose focus:outline-none focus:ring-0"
 		aria-label={contact.actionType}
 		tabindex="-1"
 	>
@@ -25,3 +23,12 @@
 		</span>
 	</button>
 </a>
+
+<style>
+	.button-shadow {
+		box-shadow: none;
+	}
+	.button-shadow-hover:hover {
+		box-shadow: 0 0 6px 1px #FFE4E6;
+	}
+</style>
