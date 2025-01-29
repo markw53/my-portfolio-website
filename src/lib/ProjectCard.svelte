@@ -64,18 +64,11 @@
 	</div>
 </div>
 
-<!--
-</div>
--->
-
 <style>
 	.button-shadow {
 		box-shadow: 0 0 6px 1px #e5e7eb;
 	}
 	.button-shadow-hover:hover {
 		box-shadow: 0 0 6px 2px #e5e7eb;
-	}
-	.image-container img {
-		object-fit: fill;
 	}
 </style>
