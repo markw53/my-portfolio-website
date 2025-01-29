@@ -1,17 +1,14 @@
 <script>
 	export let project;
-
 </script>
 
-<div class="p-6"> <!-- mb-8 -->
+<div class="p-6">
 	{#if project.photo.src}
-		<div class="relative mb-4 flex h-64 max-w-screen-sm items-center justify-center bg-transparent">
-			<img
-				class="inset-0 z-20 max-h-full p-1 opacity-100"
-				src={project.photo.src}
-				alt={project.photo.alt}
-			/>
-		</div>
+		<img
+			class="mb-4 max-h-64 overflow-hidden rounded-sm border-2 border-secondary object-scale-down sm:max-h-96"
+			src={project.photo.src}
+			alt={project.photo.alt}
+		/>
 	{/if}
 	<div class="flex flex-row items-center text-secondary">
 		<h3>
@@ -56,10 +53,10 @@
 	{#each project.description as paragraph}
 		<p>{paragraph}</p>
 	{/each}
-	<div class="mt-6 flex flex-wrap items-start text-center pb-4 border-b">
+	<div class="mt-6 flex flex-wrap items-start border-b pb-4 text-center">
 		{#each project.skills as skill}
 			<li
-				class={`m-4 flex items-center justify-center rounded-full bg-transparent px-2.5 py-0.5 text-sm font-semibold outline outline-1 button-shadow`}
+				class={`button-shadow m-4 flex items-center justify-center rounded-full bg-transparent px-2.5 py-0.5 text-sm font-semibold outline outline-1`}
 			>
 				{skill}
 			</li>
@@ -72,10 +69,13 @@
 -->
 
 <style>
-		.button-shadow {
+	.button-shadow {
 		box-shadow: 0 0 6px 1px #e5e7eb;
 	}
 	.button-shadow-hover:hover {
 		box-shadow: 0 0 6px 2px #e5e7eb;
+	}
+	.image-container img {
+		object-fit: fill;
 	}
 </style>

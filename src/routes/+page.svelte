@@ -54,12 +54,12 @@
 				<Experience experiences={DATA.ABOUT.experience} education={DATA.ABOUT.education} />
 			</FadeInSection>
 		</div>
-		<div id="projects" class="col-span-1 lg:w-[95%]">
+		<div id="projects" class="lg:w-[95%]">
 			<FadeInSection>
 				<Projects projects={DATA.PROJECTS} skills={DATA.SKILLS} />
 			</FadeInSection>
 		</div>
-		<div id="contact" class="col-span-1 lg:w-[95%]">
+		<div id="contact" class="lg:w-[95%]">
 			<FadeInSection>
 				<Contact />
 			</FadeInSection>
@@ -74,7 +74,7 @@
 		id="to-top-button"
 		on:click={goToTop}
 		title="Go To Top"
-		class="z-90 fixed bottom-8 right-8 flex hidden h-16 w-16 items-center justify-center rounded-full border-0 bg-accent-salmon text-3xl font-bold text-primary drop-shadow-md"
+		class="z-90 button-shadow button-shadow-hover fixed bottom-8 right-8 flex hidden h-16 w-16 items-center justify-center rounded-full border-0 bg-accent-salmon text-3xl font-bold text-primary drop-shadow-md hover:bg-accent-rose"
 		aria-label="Go to top"
 	>
 		<svg
@@ -96,6 +96,11 @@
 
 <style>
 	@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
+	.button-shadow {
+		box-shadow: none;
+	}
+	.button-shadow-hover:hover {
+		box-shadow: 0 0 6px 1px #ffe4e6;
+	}
 </style>
-
-

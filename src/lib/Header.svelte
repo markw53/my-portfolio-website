@@ -2,7 +2,7 @@
 	import SocialButton from './SocialButton.svelte';
 	export let personal;
 	export let contacts;
-
+	
 	function scrollToSection(event) {
 		event.preventDefault();
 		const targetId = event.currentTarget.getAttribute('href').substring(1);
@@ -21,7 +21,6 @@
 
 	function calculateLineWidth(element) {
 		const rect = element.getBoundingClientRect();
-		console.log('Rect:', rect);
 		return Math.ceil(rect.width) * 1.25; //rect.x;
 	}
 
@@ -29,19 +28,16 @@
 		const link = event.target;
 		const line = link.previousElementSibling;
 		const width = calculateLineWidth(link);
-		console.log('Mouse Enter - Width:', width);
-		line.style.width = `${width}px`
+		line.style.width = `${width}px`;
 		link.style.transform = 'scale(1.25)';
 	}
 
-    function handleMouseLeave(event) {
+	function handleMouseLeave(event) {
 		const link = event.target;
-        const line = link.previousElementSibling;
-        console.log('Mouse Leave - Line:', line);
+		const line = link.previousElementSibling;
 		line.style.width = '0px';
-        link.style.transform = 'scale(1)';
-    }
-
+		link.style.transform = 'scale(1)';
+	}
 </script>
 
 <header class="p-10 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:py-24">
@@ -59,7 +55,6 @@
 					href={`#${navLink}`}
 					on:click={scrollToSection}
 					class="inline-block origin-bottom-left transform capitalize transition-transform duration-300 ease-in-out hover:pl-2"
-
 					on:mouseenter={handleMouseEnter}
 					on:mouseleave={handleMouseLeave}
 					>{navLink}
@@ -73,8 +68,22 @@
 			<SocialButton {contact} />
 		{/each}
 	</div>
+
+	<div class="mt-12">
+		<a
+			class="btn button-shadow button-shadow-hover mt-4 rounded-md bg-secondary px-3 py-3 text-xl font-semibold text-primary hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary"
+			href={personal.cv_url}
+			target="_blank"
+			>Download and view my CV
+		</a>
+	</div>
 </header>
 
 <style>
-
+	.button-shadow {
+		box-shadow: none;
+	}
+	.button-shadow-hover:hover {
+		box-shadow: 0 0 6px 1px #7dd3fc;
+	}
 </style>

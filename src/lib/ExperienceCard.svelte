@@ -22,7 +22,7 @@
 </script>
 
 <div id="experienceAccordion">
-	<div class="hover:bg-neutral-gray hover:text-primary border border-none pb-2 pl-6 pr-6 pt-2">
+	<div class="hover:bg-black/10 border border-none pb-2 pl-6 pr-6 pt-2">
 		<button
 			type="button"
 			class="mb-0 w-full cursor-pointer text-left"

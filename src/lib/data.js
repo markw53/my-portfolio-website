@@ -9,8 +9,9 @@ const PERSONAL = {
 	surname: 'Wilde',
 	role: 'Software Developer',
 	introduction:
-		'Junior software developer with a background in JavaScript, React, SQL, and Python.',
-	location: 'Manningtree, England'
+		'Junior software developer focused on creating dynamic full-stack applications that combine user-friendly design with robust backend functionality.',
+	location: 'Manningtree, England',
+	cv_url: '/KatherineWilde-CV.pdf'
 };
 
 const SKILLS = {
@@ -27,7 +28,7 @@ const SKILLS = {
 		{ name: 'React', icon: '/photos/React.svg', category: 'frameworks' },
 		{ name: 'React Native', icon: '/photos/React.svg', category: 'frameworks' },
 		{ name: 'Node.js', icon: '/photos/Node.js.svg', category: 'frameworks' },
-		{ name: 'Express', icon: '/photos/Express.png', category: 'frameworks' },
+		{ name: 'Express', icon: '/photos/Express.svg', category: 'frameworks' },
 		{ name: 'Svelte', icon: '/photos/Svelte.svg', category: 'frameworks' },
 		{ name: 'Sveltekit', icon: '/photos/Svelte.svg', category: 'frameworks' },
 		{ name: 'PostgreSQL', icon: '/photos/PostgresSQL.svg', category: 'databases' },
@@ -184,8 +185,13 @@ const PROJECTS = [
 		organisation: '',
 		year: 'December 2024',
 		type: 'Svelte Web App',
-		description: '',
+		description: [
+			'A personal portfolio website built with Svelte and Tailwind CSS to showcase my skills, projects and experience.',
+			'Features include smooth scrolling navigation, expandable sections for work experience, smooth fade-in animations on scroll, and a fully responsive design.',
+			'It also includes links to social media and a contact form managed through Netlify, making it easier for users to engage. This creates an engaging platform for potential employers and collaborators.',
+		],
 		photo: { src: '', alt: '' },
+
 		link: 'https://github.com/kwildeDev/portfolio-app',
 		skills: ['JavaScript', 'Sveltekit', 'Tailwind CSS']
 	},
@@ -200,7 +206,8 @@ const PROJECTS = [
 			'Users can complete tasks within time limits, earn gems, and track progress with routines and graphs.',
 			'The app was designed for cross-platform functionality, with a backend powered by Express and PostgreSQL.'
 		],
-		photo: { src: '/photos/timetreasures.png', alt: 'Time Treasures splashscreen' },
+		photo: { src: '/photos/tt-timer.png', alt: 'Time Treasures timer page' },
+
 		link: 'https://northcoders.com/project-phase/time-treasures',
 		skills: ['JavaScript', 'React Native', 'Node.js', 'PostgreSQL', 'Victory Native XL', 'Redux']
 	},
@@ -215,7 +222,8 @@ const PROJECTS = [
 			'It features a responsive design, a RESTful API with Express and PostgreSQL, and a React frontend.',
 			'Key functionalities include article filtering, sorting, voting, and commenting, all backed by comprehensive testing for reliability.'
 		],
-		photo: { src: '/photos/nc-news.png', alt: 'NC News homepage' },
+		photo: { src: '/photos/ncnews-home-light.png', alt: 'NC News homepage' },
+
 		link: 'https://github.com/kwildeDev/fe-nc-news',
 		skills: ['JavaScript', 'Node.js', 'Express', 'PostgreSQL', 'React', 'Material UI']
 	},
@@ -231,6 +239,7 @@ const PROJECTS = [
 			'Proposed improvements include saving search results and refining recipe selection to enhance the user experience.'
 		],
 		photo: { src: '', alt: '' },
+
 		link: 'https://github.com/kwildeDev/py_recipe_search',
 		skills: ['Python']
 	}
