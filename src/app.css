@@ -19,6 +19,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Lato', 'Segoe UI', 'Arial', sans-serif;
+}
+
+
 p {
   @apply leading-[1.6];
 }

@@ -8,6 +8,7 @@
 	<div class="rounded-lg p-6 pt-0">
 		{#each paragraphs as paragraph}
 			<p>{paragraph}</p>
+			<br />
 		{/each}
 	</div>
 </section>

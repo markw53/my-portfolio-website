@@ -2,7 +2,7 @@
 	import SocialButton from './SocialButton.svelte';
 	export let personal;
 	export let contacts;
-	
+
 	function scrollToSection(event) {
 		event.preventDefault();
 		const targetId = event.currentTarget.getAttribute('href').substring(1);
@@ -45,7 +45,7 @@
 	<p class="mb-4 text-4xl text-secondary">{personal.role}</p>
 	<p class="text-xl">{personal.introduction}</p>
 
-	<nav class="mt-4 flex flex-col space-y-4 text-2xl">
+	<nav class="hide-on-mobile mt-4 flex flex-col space-y-4 text-2xl">
 		{#each navLinks as navLink}
 			<div class="group relative inline-block">
 				<div
@@ -71,7 +71,7 @@
 
 	<div class="mt-12">
 		<a
-			class="btn button-shadow button-shadow-hover mt-4 rounded-md bg-secondary px-3 py-3 text-xl font-semibold text-primary hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary"
+			class="btn button-shadow button-shadow-hover mt-4 rounded-md bg-secondary px-3 py-3 text-xl font-semibold text-primary sm:hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary active:bg-secondary-dark transition duration-200"
 			href={personal.cv_url}
 			target="_blank"
 			>Download and view my CV
@@ -85,5 +85,14 @@
 	}
 	.button-shadow-hover:hover {
 		box-shadow: 0 0 6px 1px #7dd3fc;
+	}
+
+	@media (max-width: 768px) {
+		.hide-on-mobile {
+			display: none;
+		}
+		.button-shadow-hover:hover {
+			box-shadow: none;
+		}
 	}
 </style>

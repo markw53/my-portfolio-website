@@ -57,11 +57,21 @@ const CONTACTS = [
 	}
 ];
 
+// I began my career in software development in the late 1990s to early 2000s as an analyst programmer, working on bespoke business ERP systems. While my career took a different path after that, my passion for creating software remained strong, and it was always my dream to return to it.
+// I started building websites as a hobby and volunteered for various projects. During a job in a school office, I developed an interest in Python and saw its potential for automation. Since then, I've been on a mission to learn as much as I can, building my skills and knowledge through courses like Code First Girls. More recently, completing a JavaScript bootcamp with Northcoders has really deepened my expertise and expanded my understanding. 
+// Working on projects—whether solo or collaboratively—truly allows me to feel like my authentic self and brings me happiness. The combination of creativity and problem-solving gives me real satisfaction, especially when I can create something that provides a meaningful solution and positively impacts people's lives.
+
+// I began my career in software development in the late 1990s to early 2000s as an analyst programmer, working on bespoke business ERP systems. While my career took a different direction after that, my passion for creating software remained strong, and it was always my goal to return to it.
+// I started building websites as a hobby and volunteered for various projects. During a role in a school office, I developed an interest in Python and its potential for automation. Since then, I’ve been focused on expanding my knowledge through courses from Code First Girls, along with self-directed learning and personal projects. More recently, completing a JavaScript bootcamp with Northcoders has deepened my expertise and broadened my understanding.
+// Working on projects—whether solo or collaboratively—lets me merge creativity with problem-solving, which I find especially rewarding. I enjoy creating solutions that have a meaningful impact and help improve people's lives.
+
+
+
 const ABOUT = {
 	paragraphs: [
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+		`I began my career in software development in the late 1990s to early 2000s as an analyst programmer, working on bespoke business ERP systems. While my career took a different direction after that, my passion for creating software remained strong, and it was always my goal to return to it.`,
+		`I started building websites as a hobby and volunteered for various projects. During a role in a school office, I developed an interest in Python and its potential for automation. Since then, I’ve been focused on expanding my knowledge through courses from Code First Girls, along with self-directed learning and personal projects. More recently, completing a JavaScript bootcamp with Northcoders has deepened my expertise and broadened my understanding.`,
+		`Working on projects—whether solo or collaboratively—lets me merge creativity with problem-solving, which I find especially rewarding. I enjoy creating solutions that have a meaningful impact and help improve people's lives.`
 	],
 	experience: [
 		{

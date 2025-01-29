@@ -33,14 +33,14 @@
 	}
 </script>
 
-<div class="min-h-screen bg-primary text-neutral-gray lg:flex lg:justify-between lg:gap-4">
+<div class="min-h-screen bg-primary text-neutral-gray lg:flex lg:justify-between lg:gap-4 font-sans">
 	<a href="#main-content" class="sr-only text-center text-2xl underline focus:not-sr-only"
 		>Skip to main content</a
 	>
 	<Header personal={DATA.PERSONAL} contacts={DATA.CONTACTS} />
 	<main id="main-content" class="text-neutral-white lg:w-[85%]">
 		<!-- pl-6 pr-6 -->
-		<div id="about" class="pt-24 lg:w-[95%]">
+		<div id="about" class="sm:pt-24 lg:w-[95%]">
 			<!-- pt-24 -->
 			<About paragraphs={DATA.ABOUT.paragraphs} />
 		</div>
@@ -74,7 +74,7 @@
 		id="to-top-button"
 		on:click={goToTop}
 		title="Go To Top"
-		class="z-90 button-shadow button-shadow-hover fixed bottom-8 right-8 flex hidden h-16 w-16 items-center justify-center rounded-full border-0 bg-accent-salmon text-3xl font-bold text-primary drop-shadow-md hover:bg-accent-rose"
+		class="z-90 button-shadow button-shadow-hover fixed bottom-8 right-8 flex hidden h-16 w-16 items-center justify-center rounded-full border-0 bg-accent-salmon text-3xl font-bold text-primary drop-shadow-md sm:hover:bg-accent-rose active:bg-accent-dark transition duration-200"
 		aria-label="Go to top"
 	>
 		<svg
@@ -102,5 +102,10 @@
 	}
 	.button-shadow-hover:hover {
 		box-shadow: 0 0 6px 1px #ffe4e6;
+	}
+	@media (max-width: 768px) {
+		.button-shadow-hover:hover {
+			box-shadow: none;
+		}
 	}
 </style>

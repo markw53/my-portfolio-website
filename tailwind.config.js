@@ -11,31 +11,35 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				// Primary Color Palette (Main background color and neutral shades)
 				primary: {
-					DEFAULT: '#312e81', // Indigo (main background)
+					DEFAULT: '#312e81',
 					light: '#6366f1',
 				},
 				secondary: {
-					DEFAULT: '#38bdf8', // Cyan for accent elements (buttons, links)
+					DEFAULT: '#38bdf8',
 					light: '#7dd3fc',
+					dark: '#0ea5e9',
 				},
 				accent: {
-					salmon: '#FDA4AF', // Peachy pink for highlights and hover effects
-					rose: '#FFE4E6', // Soft purple (a calm secondary accent)
+					salmon: '#FDA4AF',
+					rose: '#FFE4E6',
+					dark: '#fb7185',
 				},
 				neutral: {
-					white: '#ffffff', // White for text and background
-					gray: '#e5e7eb', // Light gray for subtle contrast
+					white: '#ffffff',
+					gray: '#e5e7eb',
 				}
 			},
 			backgroundImage: {
-				'gradient-main': 'linear-gradient(to bottom right, #312e81, #38bdf8)', // Indigo to Cyan gradient for background
-				'gradient-soft': 'linear-gradient(to bottom, #FDA4AF, #D4C0FF)', // Soft peach to purple for accents
+				'gradient-main': 'linear-gradient(to bottom right, #312e81, #38bdf8)',
+				'gradient-soft': 'linear-gradient(to bottom, #FDA4AF, #D4C0FF)',
 				'conic-gradient': 'conic-gradient(at bottom left, #f0abfc, #4ade80, #be123c)',
 				'primary-to-secondary': 'linear-gradient(45deg, #2D2D2D, #4A90E2)',
 				'prussian-blue-to-dark-purple': 'linear-gradient(45deg, #212F45, #312244)'
 			},
+			fontFamily: {
+				sans: ['Lato', 'Segoe UI', 'Arial', 'sans-serif'],
+			  },
 			translate: {
 				'20vh': '20vh'
 			},
@@ -46,3 +50,4 @@ export default {
 	},
 	plugins: [typography, forms, containerQueries, require('tw-elements/plugin.cjs')]
 };
+
