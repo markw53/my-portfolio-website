@@ -40,7 +40,7 @@
 	}
 </script>
 
-<header class="p-10 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:py-24">
+<header class="p-6 lg:p-10 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col py-12 lg:py-24">
 	<h1 class="mb-4 text-6xl font-bold">{personal.name}</h1>
 	<p class="mb-4 text-4xl text-secondary">{personal.role}</p>
 	<p class="text-xl">{personal.introduction}</p>
@@ -71,7 +71,7 @@
 
 	<div class="mt-12">
 		<a
-			class="btn button-shadow button-shadow-hover mt-4 rounded-md bg-secondary px-3 py-3 text-xl font-semibold text-primary sm:hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary active:bg-secondary-dark transition duration-200"
+			class="btn button-shadow button-shadow-hover mt-4 rounded-md bg-secondary px-3 py-3 text-xl font-semibold text-primary lg:hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary active:bg-secondary-dark transition duration-200"
 			href={personal.cv_url}
 			target="_blank"
 			>Download and view my CV
@@ -87,7 +87,7 @@
 		box-shadow: 0 0 6px 1px #7dd3fc;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		.hide-on-mobile {
 			display: none;
 		}

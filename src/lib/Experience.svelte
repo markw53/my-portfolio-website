@@ -4,7 +4,7 @@
 //	export let education;
 </script>
 
-<section class="bg-primary text-neutral-gray mb-8 rounded-sm">
+<section class="bg-primary text-neutral-gray mb-4 rounded-sm">
 	<h2 class="mb-6 pt-6 pl-6 text-4xl text-secondary">Experience</h2>
 	<div>
 		<h2 id="experienceAccordionTitle" class="sr-only">Expandable List of Work Experiences</h2>

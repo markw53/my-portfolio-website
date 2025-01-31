@@ -45,7 +45,7 @@
 
 		<button
 			type="submit"
-			class="button-shadow button-shadow-hover mt-4 w-full rounded-md bg-secondary py-3 font-semibold text-primary sm:hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary active:bg-secondary-dark transition duration-200"
+			class="button-shadow button-shadow-hover mt-4 w-full rounded-md bg-secondary py-3 font-semibold text-primary lg:hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-secondary active:bg-secondary-dark transition duration-200"
 		>
 			Submit
 		</button>
@@ -59,7 +59,7 @@
 	.button-shadow-hover:hover {
 		box-shadow: 0 0 6px 1px #7dd3fc;
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		.button-shadow-hover:hover {
 			box-shadow: none;
 		}

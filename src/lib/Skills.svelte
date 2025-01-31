@@ -6,9 +6,7 @@
 	}
 </script>
 
-<!--<div class="h-1 mb-2 rounded-lg bg-gradient-to-r from-secondary to-primary"></div>-->
-
-<section class="mb-8 rounded-sm bg-primary p-6 text-neutral-gray">
+<section class="mb-4 rounded-sm bg-primary p-6 text-neutral-gray">
 	<h2 class="mb-6 text-4xl text-secondary">Skills</h2>
 	<h3 class="text-xl font-bold">Programming Languages</h3>
 	<ul class="flex flex-wrap justify-center">

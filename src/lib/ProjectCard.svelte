@@ -5,7 +5,7 @@
 <div class="p-6">
 	{#if project.photo.src}
 		<img
-			class="mb-4 max-h-64 overflow-hidden rounded-sm border-2 border-secondary object-scale-down sm:max-h-96"
+			class="mb-4 max-h-64 overflow-hidden rounded-sm border-2 border-secondary object-scale-down lg:max-h-96"
 			src={project.photo.src}
 			alt={project.photo.alt}
 		/>
@@ -67,8 +67,5 @@
 <style>
 	.button-shadow {
 		box-shadow: 0 0 6px 1px #e5e7eb;
-	}
-	.button-shadow-hover:hover {
-		box-shadow: 0 0 6px 2px #e5e7eb;
 	}
 </style>

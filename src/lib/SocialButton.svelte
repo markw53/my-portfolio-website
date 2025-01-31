@@ -5,7 +5,7 @@
 <a href={contact.url} target="_blank" role="button" aria-label={contact.actionType}>
 	<button
 		type="button"
-		class="button-shadow button-shadow-hover mb-2 block rounded-md bg-accent-salmon p-3 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out sm:hover:bg-accent-rose focus:outline-none focus:ring-0 active:bg-accent-dark transition duration-200"
+		class="button-shadow button-shadow-hover mb-2 block rounded-md bg-accent-salmon p-3 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out lg:hover:bg-accent-rose focus:outline-none focus:ring-0 active:bg-accent-dark transition duration-200"
 		aria-label={contact.actionType}
 		tabindex="-1"
 	>
@@ -31,7 +31,7 @@
 	.button-shadow-hover:hover {
 		box-shadow: 0 0 6px 1px #ffe4e6;
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		.button-shadow-hover:hover {
 			box-shadow: none;
 		}
