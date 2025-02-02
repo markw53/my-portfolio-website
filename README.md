@@ -1,6 +1,6 @@
-# Portfolio App
+# Personal Portfolio App
 
-A modern, responsive portfolio app built with Svelte and styled using Tailwind CSS. The app dynamically displays content from a `data.js` file, making it easy for users to update their portfolio sections. It highlights personal projects, work experience, and skills, offering smooth navigation, easy content updates, and interactive features.
+A modern, responsive personal portfolio app built with Svelte and styled using Tailwind CSS. The app dynamically displays content from a `data.js` file, making it easy for users to update their portfolio sections. It highlights personal projects, work experience, and skills, offering smooth navigation, easy content updates, and interactive features.
 
 ## Table of Contents
 
