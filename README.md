@@ -4,6 +4,8 @@ A modern, responsive personal portfolio app built with Svelte and styled using T
 
 ## Table of Contents
 
+-   About this project
+
 -   Technologies Used
     
 -   Key Features
@@ -16,6 +18,15 @@ A modern, responsive personal portfolio app built with Svelte and styled using T
     
 -   License
     
+
+## About this project
+
+I decided to take on this project because I wanted a place to showcase my projects, skills, and experiences in a personal way. It also gave me 
+a chance to learn new technologies and gain more experience in frontend development. When I discovered Svelte, I was really attracted to its modular 
+setup and self-contained components, as well as how quickly I could develop with it. Using Tailwind CSS was another great learning experience; 
+it helped me apply styles rapidly, and researching it also improved my understanding of CSS. I also spent some time looking at other online portfolios 
+and learning about good web design practices, like the 60-30-10 color rule. Overall, I found this project to be very enjoyable and rewarding, and 
+I'm really pleased with the outcome.
 
 ## Technologies Used
 
