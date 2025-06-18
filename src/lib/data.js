@@ -18,6 +18,7 @@ const SKILLS = {
 	specializations: ['Software Engineering', 'Full-Stack Development'],
 	programmingLanguages: [
 		{ name: 'JavaScript', icon: '/photos/JavaScript.svg', category: 'frontend' },
+		{ name: 'TypeScript', icon: '/photos/TypeScript.svg', category: 'frontend' },
 		{ name: 'Python', icon: '/photos/Python.svg', category: 'backend' },
 		{ name: 'Java', icon: '/photos/Java.svg', category: 'backend' },
 		{ name: 'SQL', icon: '/photos/sql-database-generic-svgrepo-com.svg', category: 'backend' },
@@ -38,7 +39,8 @@ const SKILLS = {
 		{ name: 'Bootstrap', icon: '/photos/Bootstrap.svg', category: 'ui_ux' },
 		{ name: 'Material UI', icon: '/photos/Material-UI.svg', category: 'ui_ux' },
 		{ name: 'WordPress', icon: '/photos/WordPress.svg', category: 'ui_ux' },
-		{ name: 'Tailwind CSS', icon: '/photos/Tailwind-CSS.svg', category: 'ui_ux' }
+		{ name: 'Tailwind CSS', icon: '/photos/Tailwind-CSS.svg', category: 'ui_ux' },
+		{ name: 'Chakra UI', icon: '/photos/icons8-chakra-ui.svg', category: 'ui_ux' }
 	]
 };
 
@@ -76,6 +78,21 @@ const ABOUT = {
 	experience: [
 		{
 			id: 1,
+			company: 'Tech Returners',
+			jobTitle: 'Freelance Project Consultant',
+			startDate: 'April 2025',
+			endDate: 'May 2025',
+			location: 'Remote/Online',
+			description: [
+				'I worked as a freelance consultant on the Launchpad project, delivering a bespoke community-focused events platform that enables local organisations to manage and share events.',
+				'Over the course of 4 weeks, I planned, architected, built, and deployed a full-stack MVP using React, Node.js, and PostgreSQL.',
+				'The platform features a modular and scalable architecture with full WCAG compliance and a perfect Lighthouse accessibility score.',
+				'After launch, I resolved multiple GitHub issues and ensured stable deployments across Netlify, Render, and Supabase to deliver a seamless user experience.'
+			],
+			photo: { src: '', alt: '' }
+		},
+		{
+			id: 2,
 			company: 'Northcoders',
 			jobTitle: 'Software Development Student/JavaScript Student',
 			startDate: 'September 2024',
@@ -90,7 +107,7 @@ const ABOUT = {
 			photo: { src: '/photos/northcoders-icon.jpg', alt: 'Northcoders company logo' }
 		},
 		{
-			id: 2,
+			id: 3,
 			company: 'Manningtree High School',
 			jobTitle: 'Data Administrator',
 			startDate: 'July 2022',
@@ -104,7 +121,7 @@ const ABOUT = {
 			photo: { src: '/photos/mhs-logo.png', alt: 'Manningtree High School logo' }
 		},
 		{
-			id: 3,
+			id: 4,
 			company: 'Altorian Chartered Accountants',
 			jobTitle: 'Trainee Accountant',
 			startDate: 'June 2021',
@@ -117,7 +134,7 @@ const ABOUT = {
 			photo: { src: '/photos/icons8-account-64.png', alt: '' }
 		},
 		{
-			id: 4,
+			id: 5,
 			company: 'Manningtree High School',
 			jobTitle: 'Exam Invigilator (Lead)',
 			startDate: 'February 2015',
@@ -129,7 +146,7 @@ const ABOUT = {
 			photo: { src: '/photos/mhs-logo.png', alt: 'Manningtree High School logo' }
 		},
 		{
-			id: 5,
+			id: 6,
 			company: 'Self-employed',
 			jobTitle: 'Alterations Specialist',
 			startDate: 'January 2015',
@@ -141,7 +158,7 @@ const ABOUT = {
 			photo: { src: '/photos/sewing-icon.jpeg', alt: '' }
 		},
 		{
-			id: 6,
+			id: 7,
 			company: 'Stour Choral Society',
 			jobTitle: 'Volunteer Website Editor',
 			startDate: 'September 2013',
@@ -154,7 +171,7 @@ const ABOUT = {
 			photo: { src: '/photos/scs-icon.png', alt: 'Stour Choral Society logo' }
 		},
 		{
-			id: 7,
+			id: 8,
 			company: 'Stour Choral Society',
 			jobTitle: 'Honorary Treasurer',
 			startDate: 'September 2008',
@@ -178,17 +195,31 @@ const ABOUT = {
 };
 
 const PROJECTS = [
-	//{
-	//    id: 1,
-	//    title: 'Treasurer Trail',
-	//    organisation: '',
-	//    year: '2024',
-	//    type: 'React Native App',
-	//    description: '',
-	//    photo: { src: '', alt: '' },
-	//	link: 'https://github.com/kwildeDev/be-treasurer-trail',
-	//	skills: [],
-	//},
+	{
+	    id: 1,
+	    title: 'Scene Locally',
+	    organisation: 'Tech Returners Launchpad',
+	    year: 'May 2025',
+	    type: 'Full Stack Web App',
+	    description: [
+	 			'A full-stack community events platform designed to help local organisations create, manage, and promote events while allowing community members to browse and register for events.',
+				'Built as part of the Tech Returners Launchpad programme with a focus on scalability, accessibility, and user experience.',
+				'  「 ✦ Key Features: ✦ 」  ',
+  				'• Full-stack app built with React, TypeScript, Chakra UI, Node.js, Express, and PostgreSQL',
+  				'• Multi-role user system (Attendee, Organiser, Admin) with secure JWT authentication',
+  				'• Integrated \'Add to Google Calendar\' feature using prefilled event links',
+  				'• Refactored forms into 7 modular components and 6 custom hooks for maintainability',
+  				'• Achieved 100 Lighthouse Accessibility score across all pages (semantic HTML, ARIA roles, contrast, keyboard navigation)',
+  				'• Implemented dark mode toggle with full compatibility across Chakra UI, React Select, and custom components',
+  				'• Used Zod and React Hook Form for robust form validation and custom warning/success/error toasts',
+  				'• Centralised user state management with context providers to eliminate prop-drilling',
+  				'• Deployed across Netlify (frontend), Render (backend), and Supabase (database)',
+  				'• Closed 13 GitHub issues post-delivery and received strong client feedback for accessibility, architecture, and UX'
+			],		
+	    photo: { src: '/photos/scene-locally.png', alt: 'Scene Locally homepage' },
+		link: 'https://github.com/kwildeDev/fe-scene-locally',
+		skills: ['TypeScript', 'React', 'Chakra UI', 'Node.js', 'Express', 'PostgreSQL', 'JWT'],
+	},
 	{
 		id: 2,
 		title: 'Portfolio App',
@@ -218,7 +249,7 @@ const PROJECTS = [
 		],
 		photo: { src: '/photos/tt-timer.png', alt: 'Time Treasures timer page' },
 
-		link: 'https://northcoders.com/project-phase/time-treasures',
+		link: 'https://github.com/TTibbs/time-treasures-backend',
 		skills: ['JavaScript', 'React Native', 'Node.js', 'PostgreSQL', 'Victory Native XL', 'Redux']
 	},
 	{
