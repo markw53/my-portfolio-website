@@ -4,14 +4,14 @@ const SOURCE = {
 };
 
 const PERSONAL = {
-	name: 'Katherine Wilde',
-	first_name: 'Katherine',
-	surname: 'Wilde',
+	name: 'Mark Workman',
+	first_name: 'Mark',
+	surname: 'Workman',
 	role: 'Software Developer',
 	introduction:
 		'Junior software developer focused on creating dynamic full-stack applications that combine user-friendly design with robust backend functionality.',
-	location: 'Manningtree, England',
-	cv_url: '/KatherineWilde-CV.pdf'
+	location: 'Devon, England',
+	cv_url: '/MarkWorkman-CV.pdf'
 };
 
 const SKILLS = {
