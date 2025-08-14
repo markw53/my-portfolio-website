@@ -71,8 +71,8 @@ const CONTACTS = [
 
 const ABOUT = {
 	paragraphs: [
-		`I began my career in software development in the late 1990s to early 2000s as an analyst programmer, working on bespoke business ERP systems. While my career took a different direction after that, my passion for creating software remained strong, and it was always my goal to return to it.`,
-		`I started building websites as a hobby and volunteered for various projects. During a role in a school office, I developed an interest in Python and its potential for automation. Since then, I’ve been focused on expanding my knowledge through courses from Code First Girls, along with self-directed learning and personal projects. More recently, completing a JavaScript bootcamp with Northcoders has deepened my expertise and broadened my understanding.`,
+		`I began my career in retail before retraining as a teacher and from there my interest in software development grew. From teaching maths and then moving into Computer Science this ignited my passion for creating software. I taught myself HTML and CSS, and started building websites as a hobby. I volunteered for various projects, which allowed me to explore my interest in programming further.`,
+		`As I transitioned into Computer Science, I taught myself Python and its potential for getting students into coding using Raspberry pi's and MicroBit's. Since then, I’ve been focused on expanding my knowledge through courses from Future Learn, along with self-directed learning and personal projects. More recently, completing a JavaScript bootcamp with Northcoders has deepened my expertise and broadened my understanding.`,
 		`Working on projects—whether solo or collaboratively—lets me merge creativity with problem-solving, which I find especially rewarding. I enjoy creating solutions that have a meaningful impact and help improve people's lives.`
 	],
 	experience: [
@@ -186,10 +186,10 @@ const ABOUT = {
 	education: [
 		{
 			id: 1,
-			school: 'University of Sheffield',
-			degree: 'Bachelor of Music (Hons)',
-			graduationDate: '1996',
-			photo: { src: '/photos/uos-crest.svg', alt: 'University of Sheffield logo' }
+			school: 'University of Plymouth',
+			degree: 'BSc in Mathematics and Statistics (Hons)',
+			graduationDate: '2007',
+			photo: { src: '/photos/UoP-logo.png', alt: 'University of Plymouth logo' }
 		}
 	]
 };
