@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 
 	let isVisible = writable(false);
-	let domRef;
+	let domRef!: HTMLDivElement;
 
 	onMount(() => {
 		const observer = new IntersectionObserver(
@@ -23,9 +23,14 @@
 
 <style>
 	.fade-in-section {
-		@apply translate-y-20vh invisible transform opacity-0 transition-opacity duration-500 ease-out;
+		transform: translateY(20vh);
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 500ms ease-out, transform 500ms ease-out;
 	}
 	.is-visible {
-		@apply visible transform-none opacity-100;
+		visibility: visible;
+		transform: none;
+		opacity: 1;
 	}
 </style>

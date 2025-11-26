@@ -6,8 +6,8 @@
 	onMount(async () => {
 		if (typeof window !== 'undefined') {
 			try {
-				const { Collapse, initTWE } = await import('tw-elements/js/tw-elements.umd.min.js');
-				initTWE({ Collapse });
+				const { Collapse, initTE } = await import('tw-elements');
+				initTE({ Collapse });
 			} catch (error) {
 				console.error('Failed to load tw-elements:', error);
 			}

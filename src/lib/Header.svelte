@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
 	import SocialButton from './SocialButton.svelte';
-	export let personal;
-	export let contacts;
+	export let personal: any;
+	export let contacts: any[];
 
-	function scrollToSection(event) {
+	function scrollToSection(event: MouseEvent) {
 		event.preventDefault();
-		const targetId = event.currentTarget.getAttribute('href').substring(1);
+		const anchor = event.currentTarget as HTMLAnchorElement | null;
+		const href = anchor?.getAttribute('href') ?? '';
+		const targetId = href.substring(1);
 		const targetElement = document.getElementById(targetId);
 
 		if (targetElement) {
@@ -19,22 +21,22 @@
 
 	const navLinks = ['about', 'experience', 'projects', 'contact'];
 
-	function calculateLineWidth(element) {
+	function calculateLineWidth(element: HTMLElement) {
 		const rect = element.getBoundingClientRect();
 		return Math.ceil(rect.width) * 1.25; //rect.x;
 	}
 
-	function handleMouseEnter(event) {
-		const link = event.target;
-		const line = link.previousElementSibling;
+	function handleMouseEnter(event: MouseEvent) {
+		const link = event.target as HTMLElement;
+		const line = link.previousElementSibling as HTMLElement;
 		const width = calculateLineWidth(link);
 		line.style.width = `${width}px`;
 		link.style.transform = 'scale(1.25)';
 	}
 
-	function handleMouseLeave(event) {
-		const link = event.target;
-		const line = link.previousElementSibling;
+	function handleMouseLeave(event: MouseEvent) {
+		const link = event.target as HTMLElement;
+		const line = link.previousElementSibling as HTMLElement;
 		line.style.width = '0px';
 		link.style.transform = 'scale(1)';
 	}

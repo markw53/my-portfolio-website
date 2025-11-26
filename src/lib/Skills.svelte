@@ -1,8 +1,12 @@
-<script>
-	export let skills;
+<script lang="ts">
+	export let skills: {
+		programmingLanguages: { name: string; icon?: string }[];
+		technologies: { name: string; icon?: string }[];
+	};
 
-	function isValidImage(src) {
-		return src && !src.startsWith('data:') && /\.(jpg|jpeg|png|gif|bmp|svg|webp)$/i.test(src);
+	function isValidImage(src?: string): boolean {
+		if (!src) return false;
+		return !src.startsWith('data:') && /\.(jpg|jpeg|png|gif|bmp|svg|webp)$/i.test(src);
 	}
 </script>
 

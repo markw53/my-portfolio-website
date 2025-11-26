@@ -12,17 +12,21 @@
 	onMount(async () => {
 		if (typeof window !== 'undefined') {
 			try {
-				const { initTWE } = await import('tw-elements/js/tw-elements.umd.min.js');
-				initTWE();
+				const { initTE } = await import('tw-elements');
+				if (typeof initTE === 'function') {
+					initTE();
+				}
 			} catch (error) {
 				console.error('Failed to load tw-elements:', error);
 			}
 			const toTopButton = document.getElementById('to-top-button');
 			window.onscroll = function () {
-				if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-					toTopButton.classList.remove('hidden');
-				} else {
-					toTopButton.classList.add('hidden');
+				if (toTopButton) {
+					if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+						toTopButton.classList.remove('hidden');
+					} else {
+						toTopButton.classList.add('hidden');
+					}
 				}
 			};
 		}
@@ -51,12 +55,12 @@
 		</div>
 		<div id="experience" class="lg:w-[95%]">
 			<FadeInSection>
-				<Experience experiences={DATA.ABOUT.experience} education={DATA.ABOUT.education} />
+				<Experience experiences={DATA.ABOUT.experience} />
 			</FadeInSection>
 		</div>
 		<div id="projects" class="lg:w-[95%]">
 			<FadeInSection>
-				<Projects projects={DATA.PROJECTS} skills={DATA.SKILLS} />
+				<Projects projects={DATA.PROJECTS} />
 			</FadeInSection>
 		</div>
 		<div id="contact" class="lg:w-[95%]">
