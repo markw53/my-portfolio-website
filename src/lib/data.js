@@ -1,6 +1,6 @@
 const SOURCE = {
 	creation_year: 2025,
-	src: 'https://github.com/kwildeDev/portfolio-app'
+	src: 'https://github.com/markw53/my-portfolio-website'
 };
 
 const PERSONAL = {
@@ -59,16 +59,6 @@ const CONTACTS = [
 	}
 ];
 
-// I began my career in software development in the late 1990s to early 2000s as an analyst programmer, working on bespoke business ERP systems. While my career took a different path after that, my passion for creating software remained strong, and it was always my dream to return to it.
-// I started building websites as a hobby and volunteered for various projects. During a job in a school office, I developed an interest in Python and saw its potential for automation. Since then, I've been on a mission to learn as much as I can, building my skills and knowledge through courses like Code First Girls. More recently, completing a JavaScript bootcamp with Northcoders has really deepened my expertise and expanded my understanding. 
-// Working on projects—whether solo or collaboratively—truly allows me to feel like my authentic self and brings me happiness. The combination of creativity and problem-solving gives me real satisfaction, especially when I can create something that provides a meaningful solution and positively impacts people's lives.
-
-// I began my career in software development in the late 1990s to early 2000s as an analyst programmer, working on bespoke business ERP systems. While my career took a different direction after that, my passion for creating software remained strong, and it was always my goal to return to it.
-// I started building websites as a hobby and volunteered for various projects. During a role in a school office, I developed an interest in Python and its potential for automation. Since then, I’ve been focused on expanding my knowledge through courses from Code First Girls, along with self-directed learning and personal projects. More recently, completing a JavaScript bootcamp with Northcoders has deepened my expertise and broadened my understanding.
-// Working on projects—whether solo or collaboratively—lets me merge creativity with problem-solving, which I find especially rewarding. I enjoy creating solutions that have a meaningful impact and help improve people's lives.
-
-
-
 const ABOUT = {
 	paragraphs: [
 		`I began my career in retail before retraining as a teacher and from there my interest in software development grew. From teaching maths and then moving into Computer Science this ignited my passion for creating software. I taught myself HTML and CSS, and started building websites as a hobby. I volunteered for various projects, which allowed me to explore my interest in programming further.`,
@@ -108,79 +98,86 @@ const ABOUT = {
 		},
 		{
 			id: 3,
-			company: 'Manningtree High School',
-			jobTitle: 'Data Administrator',
-			startDate: 'July 2022',
-			endDate: 'January 2024',
-			location: 'Manningtree',
+			company: 'Digital Skills HQ / Code First',
+			jobTitle: 'Data Analyst',
+			startDate: 'December 2023',
+			endDate: 'February 2024',
+			location: 'Remote/Online',
 			description: [
-				'Managed school management information systems (ESS SIMS, Go 4 Schools, ALPS Education), overseeing data collection, processing, analysis, and reporting to stakeholders.',
-				'Developed expertise in educational MIS, including key performance measures, methodologies, and data challenges. Utilised Excel for data manipulation and formatting, demonstrating a strong understanding of data types and complex formulae. Explored automation opportunities and digitised a paper-based process for improved efficiency.',
-				'Improved operational efficiency by supporting the finance team through managing payment items and procurement processes and ensuring accurate financial records.'
+				'Completed a comprehensive Data Analyst course covering data analysis, visualisation, and reporting using Excel and Power BI.',
+				'Extensive hands-on experience with data cleaning, transformation, and analysis techniques to derive actionable insights from complex datasets.',
+				'Explored and built queries in SQL to extract and manipulate data from relational databases, enhancing my ability to work with large datasets effectively.'
 			],
-			photo: { src: '/photos/mhs-logo.png', alt: 'Manningtree High School logo' }
+			photo: { src: '/photos/mhs-logo.png', alt: 'Digital Skills HQ logo' }
 		},
 		{
 			id: 4,
-			company: 'Altorian Chartered Accountants',
-			jobTitle: 'Trainee Accountant',
-			startDate: 'June 2021',
-			endDate: 'November 2021',
-			location: 'Manningtree',
+			company: 'Outlier.ai',
+			jobTitle: 'AI Data Scientist',
+			startDate: 'January 2024',
+			endDate: 'Present',
+			location: 'Remote/Online',
 			description: [
-				'Work experience in October 2020 resulted in a permanent role. Demonstrated proficiency in various accounting software (Excel, VT Transaction+, Sage, Xero, QuickBooks, FreeAgent, BTC Transaction) for accurate and detailed bookkeeping tasks, including journal postings and ledger reconciliations.',
-				'Executed accurate personal and business tax returns for micro entity companies and sole traders, ensuring compliance with financial regulations through meticulous analysis and effective client communication.'
+				'Trained AI model responses by using grading rubrics to select the best response path.',
+				'Using Pandas and NumPy to clean and organise datasets for model training and evaluation.',
+				'As a reviewer, provided feedback on model outputs to improve accuracy and relevance.'
 			],
 			photo: { src: '/photos/icons8-account-64.png', alt: '' }
 		},
 		{
 			id: 5,
-			company: 'Manningtree High School',
-			jobTitle: 'Exam Invigilator (Lead)',
-			startDate: 'February 2015',
-			endDate: 'June 2022',
-			location: 'Manningtree',
+			company: 'Brixham College',
+			jobTitle: 'Teacher of Computer Science',
+			startDate: 'August 2023',
+			endDate: 'December 2023',
+			location: 'Brixham, Devon',
 			description: [
-				'Coordinated detailed exam procedures, ensuring adherence to standards and student data confidentiality. Managed all aspects of exams, from setup to post-exam processes, while effectively leading a team of invigilators.'
+				'Educating and inspiring students in Computer Science, delivering engaging lessons that foster a deep understanding of programming concepts and computational thinking.',
+				'Developing and implementing curriculum plans that align with educational standards, ensuring students are well-prepared for examinations and future studies in the field.',
+				'Utilising a variety of teaching methods and technologies to accommodate different learning styles, creating an inclusive classroom environment that encourages student participation and enthusiasm for the subject.'
 			],
-			photo: { src: '/photos/mhs-logo.png', alt: 'Manningtree High School logo' }
+			photo: { src: '/photos/mhs-logo.png', alt: 'Brixham College logo' }
 		},
 		{
 			id: 6,
-			company: 'Self-employed',
-			jobTitle: 'Alterations Specialist',
-			startDate: 'January 2015',
-			endDate: 'July 2017',
-			location: 'Manningtree',
+			company: 'Okehampton College',
+			jobTitle: 'Teacher of Maths and IT',
+			startDate: 'September 2022',
+			endDate: 'August 2023',
+			location: 'Okehampton, Devon',
 			description: [
-				'Delivered precise and high-quality alterations tailored to client needs, demonstrating meticulous attention to detail and the ability to customise solutions.'
+				'Educated and inspired students in Mathematics and IT, delivering engaging lessons that foster a deep understanding of mathematical concepts and information technology principles.',
+				'Prepared and delivered informative and relevant presentations to parents during open evenings and consultation sessions, effectively communicating student progress and curriculum details.',
 			],
 			photo: { src: '/photos/sewing-icon.jpeg', alt: '' }
 		},
 		{
 			id: 7,
-			company: 'Stour Choral Society',
-			jobTitle: 'Volunteer Website Editor',
-			startDate: 'September 2013',
-			endDate: 'October 2020',
-			location: 'Manningtree',
+			company: 'Teaching Personnel',
+			jobTitle: 'Supply Teacher',
+			startDate: 'September 2021',
+			endDate: 'September 2022',
+			location: 'Various Locations',
 			description: [
-				'Developed and launched a new website while self-learning HTML and CSS, and exploring JavaScript and PHP. Collaborated effectively with the committee and members to ensure the website met their needs.',
-				'Maintained ongoing comprehensive updates, ensuring continuous user-friendly experience. Updated the website to WordPress for streamlined maintenance by team members and to enhance its useability.'
+				'Flexible and adaptable supply teaching across multiple schools, effectively managing diverse classroom environments and delivering curriculum-aligned lessons in the absence of regular teachers.',
+				'Demonstrated strong classroom management skills, ensuring a positive and productive learning atmosphere while maintaining continuity in students\' education.',
+				'Collaborated with school staff to understand specific classroom needs and tailored teaching approaches accordingly, contributing to the overall educational goals of each institution.'
 			],
-			photo: { src: '/photos/scs-icon.png', alt: 'Stour Choral Society logo' }
+			photo: { src: '/photos/scs-icon.png', alt: '' }
 		},
 		{
 			id: 8,
-			company: 'Stour Choral Society',
-			jobTitle: 'Honorary Treasurer',
-			startDate: 'September 2008',
-			endDate: 'October 2019',
-			location: 'Manningtree',
+			company: 'Brixham College',
+			jobTitle: 'Teacher of Maths',
+			startDate: 'September 2019',
+			endDate: 'August 2021',
+			location: 'Brixham, Devon',
 			description: [
-				'Managed financial operations, ensuring compliance with accounting standards, while overseeing budgeting, reporting, and reconciliations. Led strategic planning, including financial statements, Gift Aid management, and submissions to the Charities Commission.'
+				'Delivered high-quality mathematics education to students, fostering a deep understanding of mathematical concepts and problem-solving skills.',
+				'Developed and implemented engaging lesson plans that catered to diverse learning styles, ensuring all students had the opportunity to succeed.',
+				'Utilised various assessment methods to monitor student progress, providing constructive feedback and support to help students achieve their academic goals.'
 			],
-			photo: { src: '/photos/scs-icon.png', alt: 'Stour Choral Society logo' }
+			photo: { src: '/photos/scs-icon.png', alt: '' }
 		}
 	],
 	education: [
@@ -197,7 +194,29 @@ const ABOUT = {
 const PROJECTS = [
 	{
 	    id: 1,
-	    title: 'Scene Locally',
+	    title: 'Waggle',
+	    organisation: 'Devons Digital Soluitons - self employed',
+	    year: 'December 2025',
+	    type: 'Full Stack Web App',
+	    description: [
+	 			'A full-stack dog mating platform designed to help dog owners find suitable mates for their pets based on breed, location, and compatibility.',
+				'Built as a freelance project for Devons Digital Solutions, focusing on user experience, accessibility, and secure data handling.',
+				'  「 ✦ Key Features: ✦ 」  ',
+  				'• Full-stack app built with React, TypeScript, Tailwind CSS, Node.js, Firebase, and Firestore',
+  				'• General users can create profiles, search for mates, and send messages; Admin users can manage listings and users',
+  				'• Able to filter searches by breed, location, age, and compatibility factors',
+  				'• Breed directory with detailed information and images for over 200 dog breeds',
+  				'• Map integration using Leaflet.js to display nearby matches based on user location',
+  				'• Implemented dark mode toggle with full compatibility across Tailwind CSS, React Select, and custom components',
+  				'• Deployed across Firebase Hosting and Firestore for seamless scalability and performance',
+			],		
+	    photo: { src: '/photos/waggle.png', alt: 'waggle dog search page' },
+		link: 'https://github.com/markw53/waggle-website',
+		skills: ['TypeScript', 'Vite', 'React', 'Node.js', 'Firebase', 'Firestore', 'Tailwind CSS'],
+	},
+	{
+	    id: 2,
+	    title: 'Community Events Platform',
 	    organisation: 'Tech Returners Launchpad',
 	    year: 'May 2025',
 	    type: 'Full Stack Web App',
@@ -208,20 +227,18 @@ const PROJECTS = [
   				'• Full-stack app built with React, TypeScript, Chakra UI, Node.js, Express, and PostgreSQL',
   				'• Multi-role user system (Attendee, Organiser, Admin) with secure JWT authentication',
   				'• Integrated \'Add to Google Calendar\' feature using prefilled event links',
-  				'• Refactored forms into 7 modular components and 6 custom hooks for maintainability',
-  				'• Achieved 100 Lighthouse Accessibility score across all pages (semantic HTML, ARIA roles, contrast, keyboard navigation)',
   				'• Implemented dark mode toggle with full compatibility across Chakra UI, React Select, and custom components',
   				'• Used Zod and React Hook Form for robust form validation and custom warning/success/error toasts',
   				'• Centralised user state management with context providers to eliminate prop-drilling',
   				'• Deployed across Netlify (frontend), Render (backend), and Supabase (database)',
   				'• Closed 13 GitHub issues post-delivery and received strong client feedback for accessibility, architecture, and UX'
 			],		
-	    photo: { src: '/photos/scene-locally.png', alt: 'Scene Locally homepage' },
-		link: 'https://github.com/kwildeDev/fe-scene-locally',
-		skills: ['TypeScript', 'React', 'Chakra UI', 'Node.js', 'Express', 'PostgreSQL', 'JWT'],
+	    photo: { src: '/photos/community_events.png', alt: 'community events homepage' },
+		link: 'https://github.com/markw53/community-events',
+		skills: ['TypeScript', 'React', 'Node.js', 'Express', 'Firebase', 'JWT'],
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'Portfolio App',
 		organisation: '',
 		year: 'December 2024',
@@ -233,12 +250,12 @@ const PROJECTS = [
 		],
 		photo: { src: '', alt: '' },
 
-		link: 'https://github.com/kwildeDev/portfolio-app',
+		link: 'https://github.com/markw53/my-portfolio-website',
 		skills: ['JavaScript', 'Sveltekit', 'Tailwind CSS']
 	},
 	{
-		id: 3,
-		title: 'Time Treasures',
+		id: 4,
+		title: 'Trippy',
 		organisation: 'Northcoders',
 		year: 'November 2024',
 		type: 'React Native Mobile App',
@@ -249,11 +266,11 @@ const PROJECTS = [
 		],
 		photo: { src: '/photos/tt-timer.png', alt: 'Time Treasures timer page' },
 
-		link: 'https://github.com/TTibbs/time-treasures-backend',
-		skills: ['JavaScript', 'React Native', 'Node.js', 'PostgreSQL', 'Victory Native XL', 'Redux']
+		link: 'https://github.com/markw53/trippy',
+		skills: ['JavaScript', 'React Native', 'Node.js', 'PostgreSQL', 'Firebase', 'Axios', 'Expo']
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'NC News',
 		organisation: 'Northcoders',
 		year: 'October 2024 to present',
@@ -265,24 +282,8 @@ const PROJECTS = [
 		],
 		photo: { src: '/photos/ncnews-home-light.png', alt: 'NC News homepage' },
 
-		link: 'https://github.com/kwildeDev/fe-nc-news',
+		link: 'https://github.com/markw53/nc-news',
 		skills: ['JavaScript', 'Node.js', 'Express', 'PostgreSQL', 'React', 'Material UI']
-	},
-	{
-		id: 4,
-		title: 'Recipe Search using Edamam API',
-		organisation: 'Code First Girls',
-		year: 'February 2024',
-		type: 'Python App',
-		description: [
-			'This project was completed as part of the Coding Kickstarter course in Python delivered by Code First Girls. It used the Edamam API to create a Python-based recipe search tool, allowing users to find recipes by ingredients.',
-			'It highlighted my skills in Python, API integration, data handling, and secure key management. Completed collaboratively, it received positive feedback for its organisation, error handling, and focus on data security.',
-			'Proposed improvements include saving search results and refining recipe selection to enhance the user experience.'
-		],
-		photo: { src: '', alt: '' },
-
-		link: 'https://github.com/kwildeDev/py_recipe_search',
-		skills: ['Python']
 	}
 ];
 
